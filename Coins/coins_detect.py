@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import os
 
-image_path = "/Users/dikshantmahawar/Desktop/Coins/coins3.jpeg"
+image_path = "Images/coins2.jpeg"
 img = cv2.imread(image_path)
 
 if img is None:
