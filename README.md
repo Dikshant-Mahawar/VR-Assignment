@@ -15,7 +15,7 @@ Both tasks leverage **OpenCV** for image processing and **NumPy** for numerical 
 1. Place images of scattered Indian coins inside the `Coins/Images/` directory.
 2. Run the script:
    ```bash
-   python Coins/coins_detect.py
+   python3 Coins/coins_detect.py
    ```
 3. The script performs the following:
    - Detects coins using **edge and contour detection**.
@@ -42,7 +42,7 @@ Both tasks leverage **OpenCV** for image processing and **NumPy** for numerical 
 1. Place all input images for stitching inside the `Panorama/Images/` directory.
 2. Run the script:
    ```bash
-   python Panorama/panorama_final.py
+   python3 Panorama/panorama_final.py
    ```
 3. The script performs the following:
    - Reads and preprocesses images from `Panorama/Images/`.
