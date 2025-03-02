@@ -12,17 +12,17 @@ Both tasks leverage **OpenCV** for image processing and **NumPy** for numerical 
 ## 1. Coin Detection & Segmentation
 
 ### **Usage Instructions**
-1. Place an image of scattered Indian coins in the root directory and name it `coins.jpeg`.
+1. Place images of scattered Indian coins inside the `Coins/Images/` directory.
 2. Run the script:
    ```bash
-   python coin_detection.py
+   python Coins/coins_detect.py
    ```
 3. The script performs the following:
    - Detects coins using **edge and contour detection**.
    - Segments each coin using **region-based segmentation**.
    - Counts the total number of detected coins.
    - Saves and displays the results.
-4. Output images are stored in the `output/` folder.
+4. Output images are stored in the `Coins/segmented_coins/` folder.
 
 ### **Techniques Used**
 - **Edge Detection** – Canny edge detection highlights coin boundaries.
@@ -39,16 +39,16 @@ Both tasks leverage **OpenCV** for image processing and **NumPy** for numerical 
 ## 2. Panorama Stitching
 
 ### **Usage Instructions**
-1. Place all input images for stitching inside the `images/` folder.
+1. Place all input images for stitching inside the `Panorama/Images/` directory.
 2. Run the script:
    ```bash
-   python panorama.py
+   python Panorama/panorama_final.py
    ```
 3. The script performs the following:
-   - Reads and preprocesses images from `images/`.
+   - Reads and preprocesses images from `Panorama/Images/`.
    - Extracts key points using **SIFT (Scale-Invariant Feature Transform)**.
    - Aligns and stitches images using **OpenCV’s Stitcher module**.
-   - Saves the final stitched image in the `output/` folder.
+   - Saves the final stitched image in the `Panorama/output/` folder.
 
 ### **Techniques Used**
 - **Feature Detection** – SIFT extracts key points and descriptors.
@@ -64,12 +64,19 @@ Both tasks leverage **OpenCV** for image processing and **NumPy** for numerical 
 
 ## Project Structure
 ```
-|-- images/              # Input images for panorama stitching
-|-- output/              # Output images (Detected coins, segmented coins, panorama results)
-|-- coin_detection.py    # Coin detection & segmentation script
-|-- panorama.py         # Panorama stitching script
-|-- coins.jpeg          # Sample coin image
-|-- README.md           # Documentation
+|-- Coins/               # Coin Detection & Segmentation
+|   |-- coins_detect.py  # Code for coin detection
+|   |-- Images/          # Contains images of coins
+|   |-- segmented_coins/ # Contains segmented images of the coins
+|   |-- myenv/           # Python environment
+|
+|-- Panorama/            # Panorama Stitching
+|   |-- panorama_final.py # Code for stitching overlapping images
+|   |-- Images/          # Contains overlapping images for stitching
+|   |-- output/          # Contains key points detected and stitched images
+|   |-- myenv/           # Python environment
+|
+|-- README.md            # Documentation
 ```
 
 ---
@@ -85,7 +92,7 @@ pip install opencv-python opencv-contrib-python numpy matplotlib
 ## Additional Notes
 - Place input images in the correct directories before running the scripts.
 - The scripts run automatically without manual intervention.
-- All output images are saved in the `output/` folder.
+- All output images are saved in their respective `output/` folders.
 
 For troubleshooting, verify file paths and dependencies.
 
